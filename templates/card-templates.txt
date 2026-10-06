@@ -1,0 +1,60 @@
+CARD TEMPLATES
+==============
+Paste a card inside <main class="sources"> ... </main> on general.html, history.html,
+wildlife.html or tourism.html. Cards share the window height, so any number fits without
+scrolling (up to about 8 looks best). Delete the "More sources coming soon" tile once a
+section has enough cards.
+
+The picture area (class "cover") can be one of three kinds. Pick one.
+
+
+---- 1. TEXT SOURCE, one picture ---------------------------------------------
+(scripts/clean_article.py prints this card for you every time you add an article)
+
+    <a class="source" data-type="text" href="sources/your-file-name.html">
+      <span class="cover"><img src="img/sources/your-file-name/photo.jpg" alt=""><span class="badge">Text</span></span>
+      <span class="source-body">
+        <span class="source-title">Title of the source</span>
+        <span class="source-desc">One short sentence about what it covers.</span>
+        <span class="source-from"><img class="logo" src="img/logos/teara.svg" alt="Te Ara"></span>
+      </span>
+    </a>
+
+  Logo: use  class="logo"  for white or light logos, and  class="logo on-light"  for dark logos.
+  No logo? Use  <span class="wordmark">Name of the website</span>  instead.
+
+
+---- 2. SEVERAL SMALL PICTURES AS ONE COVER (mosaic) -------------------------
+Use when the pictures are small. Five pictures make one big and four small;
+four pictures: add  quad  to the cover class for a 2 x 2 grid.
+
+      <span class="cover mosaic">
+        <img src="img/sources/x/1.jpg" alt=""><img src="img/sources/x/2.jpg" alt="">
+        <img src="img/sources/x/3.jpg" alt=""><img src="img/sources/x/4.jpg" alt="">
+        <img src="img/sources/x/5.jpg" alt="">
+        <span class="badge">Text</span>
+      </span>
+
+
+---- 3. LOGO ON A LIGHT TILE (a source with no pictures) ---------------------
+
+      <span class="cover tile"><img src="img/logos/ruggedy.svg" alt=""><span class="badge">Text</span></span>
+
+
+---- AUDIO SOURCE --------------------------------------------------------------
+Change data-type to "audio" and the badge word to Audio (the little headphones icon appears by itself).
+
+    <a class="source" data-type="audio" href="sources/your-audio-page.html">
+      <span class="cover"><img src="img/sources/your-audio-page/cover.jpg" alt=""><span class="badge">Audio</span></span>
+      <span class="source-body">
+        <span class="source-title">Title of the recording</span>
+        <span class="source-desc">One short sentence. 2 min 40 sec.</span>
+        <span class="source-from"><span class="wordmark">Speaker or programme</span></span>
+      </span>
+    </a>
+
+  The audio page itself comes from templates/audio-page.html (see README).
+
+
+---- VIDEO SOURCE --------------------------------------------------------------
+Same card with data-type="video" and the badge word Video. The page comes from templates/video-page.html.

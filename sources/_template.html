@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This page cannot load scripts, frames, fonts or pictures from anywhere except this site. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; media-src 'self'; script-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{TITLE}} – Rakiura</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="page-{{SECTION_CLASS}}">
+
+  <nav class="glass-nav" aria-label="Main">
+    <a class="brand" href="../index.html"><svg class="home-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-6h4v6"/></svg> Rakiura Stewart Island</a>
+    <div class="links">
+      <a href="../general.html">General</a>
+      <a href="../history.html">History</a>
+      <a href="../wildlife.html">Wildlife</a>
+      <a href="../tourism.html">Tourism</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <a class="back" href="../{{SECTION_FILE}}">← Back to {{SECTION_NAME}}</a>
+
+    <article class="paper">
+      <header class="doc-head">{{LOGO}}</header>
+      <h1>{{TITLE}}</h1>
+
+      {{HERO}}
+      {{GALLERY}}
+
+      <div class="prose">
+        {{CONTENT}}
+      </div>
+      <p class="apa"><span class="apa-text">{{APA}}</span></p>
+    </article>
+  </main>
+
+</body>
+</html>
